@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <Navbar />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
+    Navbar
+  },
+  data () {
+    return {
+      //
+    }
   }
 }
 </script>
 
 <style>
+@font-face {font-family: "TypographerGotisch C";
+    src: url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.eot");
+    src: url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f6afa27ab0efbdf8cf82bc5549eec51a.svg#TypographerGotisch C") format("svg");
+}
+@import url(//db.onlinewebfonts.com/c/f6afa27ab0efbdf8cf82bc5549eec51a?family=TypographerGotisch+C);
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: azure;
+  background: #000000;
+  font-family: "TypographerGotisch C";
 }
 </style>
