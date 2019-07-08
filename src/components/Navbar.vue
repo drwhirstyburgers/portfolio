@@ -27,7 +27,7 @@
           </v-list-tile-action>
         </v-list-tile>
 
-        <v-list-tile tag="div">
+        <v-list-tile tag="div" v-if="!mini">
           <v-icon>
             apps
           </v-icon>
