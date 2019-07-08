@@ -1,12 +1,8 @@
 <template>
   <nav>
     <v-toolbar
-      app
       dark 
       color="black"
-      fixed
-      absolute
-      clipped
       >
       <v-toolbar-title>David Hirst</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -17,12 +13,14 @@
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="mini"
+      clipped
       fixed
+      app
       dark
       temporary
       right
     >
-      <v-list class="pa-1">
+      <v-list>
         <v-list-tile v-if="mini" @click.stop="mini = !mini">
           <v-list-tile-action>
             <v-icon>chevron_left</v-icon>
