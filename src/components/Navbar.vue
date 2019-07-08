@@ -52,14 +52,14 @@
         <v-list-tile
           v-for="item in items"
           :key="item.title"
-          @click=""
-        >
+          :to="item.route"
+          >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
 
           <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            <v-list-tile-title>{{item.title}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -73,9 +73,9 @@
       return {
         drawer: null,
         items: [
-          { title: 'Home', icon: 'home' },
-          { title: 'About', icon: 'question_answer' },
-          { title: 'Projects', icon: 'dashboard' }
+          { title: 'Home', icon: 'home', route: '/' },
+          { title: 'About', icon: 'question_answer', route: '/about' },
+          { title: 'Projects', icon: 'dashboard', route: '/project' }
         ],
         right: true,
         mini: false,
@@ -85,4 +85,7 @@
 </script>
 
 <style>
+.v-list {
+  text-decoration: none;
+}
 </style>
