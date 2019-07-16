@@ -4,7 +4,7 @@
       dark 
       color="black"
       >
-      <v-toolbar-title>David Hirst</v-toolbar-title>
+      <v-toolbar-title>DAVID HIRST</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon
       @click.stop="drawer = !drawer">
@@ -33,7 +33,7 @@
           </v-icon>
 
           <v-list-tile-content>
-            <v-list-tile-title class="text-md-center">Menu</v-list-tile-title>
+            <v-list-tile-title class="text-md-center">MENU</v-list-tile-title>
           </v-list-tile-content>
 
           <v-list-tile-action>
@@ -71,9 +71,9 @@
       return {
         drawer: null,
         items: [
-          { title: 'Home', icon: 'home', route: '/' },
-          { title: 'About', icon: 'question_answer', route: '/about' },
-          { title: 'Projects', icon: 'dashboard', route: '/project' }
+          { title: 'HOME', icon: 'home', route: '/' },
+          { title: 'ABOUT', icon: 'question_answer', route: '/about' },
+          { title: 'PROJECTS', icon: 'dashboard', route: '/project' }
         ],
         right: true,
         mini: false,
