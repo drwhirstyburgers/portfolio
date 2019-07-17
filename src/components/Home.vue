@@ -13,7 +13,7 @@
                 I CURRENTLY WORK FOR AN EDUCATIONAL SOFTWARE COMPANY WHERE I HELP TO DEVELOP AND MAINTIAN AI BASED EXPERIENTIAL LEARNING
                 SIMULATIONS. MY MOST RECENT PROJECT INVOLVED ARCHITECTING AND DEVELOPING SOFTWARE THAT COULD PARSE IBM COGNOS ANALYTICS
                 REPORTS AND DRIVE NLP AI INTERACTIONS WITH THE DATA. I LIVE TO WORK THROUGH DIFFICULT PROBLEMS
-                AND DELIVER PERFORMANT AND CREATIVE SOLUTIONS.
+                AND DELIVER PERFORMANT AND CREATIVE SOLUTIONS. I AM CURRENTLY ENROLLED IN A MACHINE LEARNING COURSE AND HOPE TO CONFIDENTLY ADD THAT TO MY REPERTOIRE SOON.
               </v-card-text>
             </v-card>
           </v-flex>
@@ -32,10 +32,16 @@
             <v-card color="black" class="text-xs-center">
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-css3-alt</v-icon>
+              <v-icon color="white" style="font-size: 45px;" class="icons">devicon-bootstrap-plain</v-icon>
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-node-js</v-icon>
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-js-square</v-icon>
               <v-icon color="white" style="font-size: 50px;" class="icons">fab fa-vuejs</v-icon>
               <v-icon color="white" style="font-size: 47px;">fab fa-react</v-icon>
+              <v-icon color="white" style="font-size: 41px;">devicon-ruby-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;" class="icons">devicon-rails-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;">devicon-postgresql-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;">devicon-git-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;">devicon-heroku-original</v-icon>
             </v-card>
           </v-flex>
         </v-layout>
