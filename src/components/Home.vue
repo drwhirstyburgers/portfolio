@@ -1,5 +1,7 @@
 <template>
   <v-container id="grid" grid-list-sm tag="section">
+      <div class="spaced">
+          </div>
     <v-layout row wrap>
       <v-flex tag="h1">WELCOME</v-flex>
       <v-flex d-flex xs12 order-xs5>
@@ -24,13 +26,16 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <div id="spaced">
+          <div class="spaced">
           </div>
           <v-flex>
-            <v-card color="black">
-              <icon color="white">
-                  vue
-              </icon>
+            <v-card color="black" class="text-xs-center">
+              <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
+              <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-css3-alt</v-icon>
+              <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-node-js</v-icon>
+              <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-js-square</v-icon>
+              <v-icon color="white" style="font-size: 50px;" class="icons">fab fa-vuejs</v-icon>
+              <v-icon color="white" style="font-size: 47px;">fab fa-react</v-icon>
             </v-card>
           </v-flex>
         </v-layout>
@@ -55,10 +60,13 @@ export default {
 h1 {
   color: azure;
 }
+.icons {
+    margin-left: 10px;
+}
 #secondp {
     text-align: center;
 }
-#spaced {
-    height: 100px;
+.spaced {
+    height: 80px;
 }
 </style>
