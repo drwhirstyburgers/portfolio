@@ -1,11 +1,9 @@
 <template>
-  <v-container id="grid" grid-list-sm tag="section">
-      <div class="spaced">
-          </div>
-    <v-layout row wrap>
-      <v-flex tag="h1">WELCOME</v-flex>
-      <v-flex d-flex xs12 order-xs5>
+  <v-container bg fill-height grid-list-md tag="section">
+    <v-layout row wrap align-center>
+      <v-flex>
         <v-layout column>
+          <v-flex tag="h1">WELCOME</v-flex>
           <v-flex>
             <v-card flat color="black">
               <v-card-text class="white--text">
