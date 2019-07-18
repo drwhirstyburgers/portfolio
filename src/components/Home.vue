@@ -2,7 +2,7 @@
   <v-container bg fill-height grid-list-md tag="section">
     <v-layout row wrap align-center>
       <v-flex>
-        <v-layout>
+        <v-layout column>
           <v-flex tag="h1">WELCOME</v-flex>
           <v-flex>
             <v-card flat color="black">
@@ -15,6 +15,8 @@
               </v-card-text>
             </v-card>
           </v-flex>
+          </v-layout>
+          <v-layout>
           <v-flex>
             <v-card color="black">
               <v-card-text id="secondp" class="white--text">
