@@ -2,7 +2,7 @@
   <v-container bg fill-height grid-list-md tag="section">
     <v-layout row wrap align-center>
       <v-flex>
-        <v-layout column>
+        <v-layout>
           <v-flex tag="h1">WELCOME</v-flex>
           <v-flex>
             <v-card flat color="black">
@@ -24,8 +24,10 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <div class="spaced">
-          </div>
+          <v-flex>
+            <v-card color="black">
+            </v-card>
+          </v-flex>
           <v-flex>
             <v-card color="black" class="text-xs-center">
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
@@ -34,12 +36,12 @@
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-node-js</v-icon>
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-js-square</v-icon>
               <v-icon color="white" style="font-size: 50px;" class="icons">fab fa-vuejs</v-icon>
-              <v-icon color="white" style="font-size: 47px;">fab fa-react</v-icon>
-              <v-icon color="white" style="font-size: 41px;">devicon-ruby-plain</v-icon>
+              <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-react</v-icon>
+              <v-icon color="white" style="font-size: 41px;" class="icons">devicon-ruby-plain</v-icon>
               <v-icon color="white" style="font-size: 41px;" class="icons">devicon-rails-plain</v-icon>
-              <v-icon color="white" style="font-size: 41px;">devicon-postgresql-plain</v-icon>
-              <v-icon color="white" style="font-size: 41px;">devicon-git-plain</v-icon>
-              <v-icon color="white" style="font-size: 41px;">devicon-heroku-original</v-icon>
+              <v-icon color="white" style="font-size: 41px;" class="icons">devicon-postgresql-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;" class="icons">devicon-git-plain</v-icon>
+              <v-icon color="white" style="font-size: 41px;" class="icons">devicon-heroku-original</v-icon>
             </v-card>
           </v-flex>
         </v-layout>
