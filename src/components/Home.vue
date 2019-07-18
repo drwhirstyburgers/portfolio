@@ -27,8 +27,6 @@
             </v-card>
           </v-flex>
           <v-flex>
-            <v-card color="black">
-            </v-card>
           </v-flex>
           <v-flex>
             <v-card color="black" class="text-xs-center">
