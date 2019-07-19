@@ -30,7 +30,7 @@
           </v-flex>
           <v-flex>
             <v-card color="black" class="text-xs-center">
-              <v-card-text id="secondp" class="white--text">
+              <v-card-text id="secondp" class="white--text" v-if="isMobile()">
                 <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
                 <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-css3-alt</v-icon>
                 <v-icon color="white" style="font-size: 45px;" class="icons">devicon-bootstrap-plain</v-icon>
@@ -56,6 +56,15 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone||iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 };
 </script>
