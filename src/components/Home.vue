@@ -3,7 +3,7 @@
     <v-layout row wrap align-center>
       <v-flex>
         <v-layout column>
-          <v-flex tag="h1">WELCOME</v-flex>
+          <v-flex tag="h1">HELLO.</v-flex>
           <v-flex>
             <v-card flat color="black">
               <v-card-text class="white--text">
