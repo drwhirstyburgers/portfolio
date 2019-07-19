@@ -30,6 +30,7 @@
           </v-flex>
           <v-flex>
             <v-card color="black" class="text-xs-center">
+              <v-card-text id="secondp" class="white--text">
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
               <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-css3-alt</v-icon>
               <v-icon color="white" style="font-size: 45px;" class="icons">devicon-bootstrap-plain</v-icon>
@@ -42,6 +43,7 @@
               <v-icon color="white" style="font-size: 41px;" class="icons">devicon-postgresql-plain</v-icon>
               <v-icon color="white" style="font-size: 41px;" class="icons">devicon-git-plain</v-icon>
               <v-icon color="white" style="font-size: 41px;" class="icons">devicon-heroku-original</v-icon>
+              </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
