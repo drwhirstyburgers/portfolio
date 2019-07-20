@@ -31,7 +31,7 @@
           <v-flex>
             <v-card color="black" class="text-xs-center">
               <v-card-text id="secondp" class="white--text">
-                <v-icon  v-for="icon in icons" v-bind:icon="icon" v-bind:key="icon.id" color="white" style="font-size: 45px;" class="icons">{{ icon }}</v-icon>
+                <v-icon  v-for="icon in icons" v-bind:icon="icon" v-bind:key="icon.id" color="white" style="font-size: 50px;" class="icons">{{ icon }}</v-icon>
               </v-card-text>
             </v-card>
           </v-flex>
@@ -60,7 +60,7 @@ h1 {
   color: azure;
 }
 .icons {
-    margin-left: 10px;
+    margin-left: 8px;
 }
 #secondp {
     text-align: center;
