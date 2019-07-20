@@ -31,18 +31,7 @@
           <v-flex>
             <v-card color="black" class="text-xs-center">
               <v-card-text id="secondp" class="white--text">
-                <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-html5</v-icon>
-                <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-css3-alt</v-icon>
-                <v-icon color="white" style="font-size: 45px;" class="icons">devicon-bootstrap-plain</v-icon>
-                <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-node-js</v-icon>
-                <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-js-square</v-icon>
-                <v-icon color="white" style="font-size: 50px;" class="icons">fab fa-vuejs</v-icon>
-                <v-icon color="white" style="font-size: 47px;" class="icons">fab fa-react</v-icon>
-                <v-icon color="white" style="font-size: 41px;" class="icons">devicon-ruby-plain</v-icon>
-                <v-icon color="white" style="font-size: 41px;" class="icons">devicon-rails-plain</v-icon>
-                <v-icon color="white" style="font-size: 41px;" class="icons">devicon-postgresql-plain</v-icon>
-                <v-icon color="white" style="font-size: 41px;" class="icons">devicon-git-plain</v-icon>
-                <v-icon color="white" style="font-size: 41px;" class="icons">devicon-heroku-original</v-icon>
+                <v-icon  v-for="icon in icons" v-bind:icon="icon" v-bind:key="icon.id" color="white" style="font-size: 45px;" class="icons">{{ icon }}</v-icon>
               </v-card-text>
             </v-card>
           </v-flex>
@@ -55,10 +44,12 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      icons: ["fab fa-html5", "fab fa-css3-alt", "devicon-bootstrap-plain", "fab fa-node-js", "fab fa-js-square", "fab fa-vuejs", "fab fa-react", "devicon-ruby-plain", "devicon-rails-plain", "devicon-postgresql-plain", "devicon-git-plain", "devicon-heroku-original"]
+    };
   },
 }
-</script>
+</script>"
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
