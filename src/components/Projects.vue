@@ -1,12 +1,12 @@
 <template>
 <v-container bg fill-height grid-list-md tag="section">
     <v-layout v-for="project in projects" v-bind:project="project" v-bind:key="project.id" align-center justify-center row fill-height>
-        <v-flex id="b1" xs3>
+        <v-flex id="b1" xs2>
             <v-flex tag="h2" id="title">{{project.title}}</v-flex>
             <v-icon  v-for="icon in project.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
             <v-flex tag="h3">{{project.role}}</v-flex>
         </v-flex>
-        <v-flex xs9>
+        <v-flex xs10>
             <v-flex tag="p"><strong><u>Description:</u></strong>  {{project.description}} </br> <strong><u>Challenge:</u></strong>  {{project.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project.futureConsiderations}}</v-flex>
         </v-flex>
     </v-layout>
@@ -41,6 +41,7 @@ h3 {
 }
 #b1 {
     text-align: right;
+    margin-right: 5px;
 }
 #title{
     color: white;
