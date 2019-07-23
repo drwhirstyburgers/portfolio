@@ -42,7 +42,7 @@
                     <v-flex tag="h3">{{project3.role}}</v-flex>
                 </v-flex>
                 <v-flex class="b2" xs8>
-                    <v-flex tag="p"><strong><u>Description:</u></strong>  {{project3.description}} </br> <strong><u>Challenge:</u></strong>  {{project3.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project3.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project3.futureConsiderations}} </v-flex>
+                    <v-flex tag="p"><strong><u>Description:</u></strong>  {{project3.description}} </br> <strong><u>Challenges:</u></strong>  {{project3.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project3.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project3.futureConsiderations}} </v-flex>
                 </v-flex>
             </v-layout>
         </v-layout>
@@ -59,28 +59,28 @@ export default {
                 title: "IBM Cognos Scraper API",
                 languages: ["fab fa-html5", "devicon-bootstrap-plain", "fab fa-js-square", "fab fa-vuejs", "devicon-ruby-plain", "devicon-rails-plain"],
                 role: "Lead Developer",
-                description: "An API that could host a headless browser in order to scrape, parse and assess IBM Cognos Analytics Reports that could then be used to drive character interactions in the Ametros Simulation Platform to assess a learner's Cognos skill level.",
-                challenges: "As the cognos reports we needed to access were being constructed in trial accounts we found we couldn't access them via the API. Further, we needed a server that could run a headless browser.",
+                description: "An API on a server that could host a headless browser in order to scrape and parse IBM Cognos Analytics Reports that could then be used to drive character interactions in the Ametros Simulation Platform to assess a learner's Cognos skill level.",
+                challenges: "The cognos reports we needed to access were being constructed in trial accounts and subsequently we couldn't access them via the API. Our Heroku server instance was incapable of running a headless browser.",
                 solutions: "Using an EC2 server instance, a headless version of chrome and selenium we were able to create an API that took a learner's login credentials as arguments and scraped and parsed cognos reports and returned a rubric that assessed learners skill level. That data was then used to drive AI interactions in our platform.",
-                futureConsiderations: "Given the brittle nature of web scraper, we are currently designing a slack app that returns messages in a dedicated channel with all the error messages that we built into the API so we can be kept abreast of any syntactical changes made to the IBM Cognos platform."
+                futureConsiderations: "Given the brittle nature of web scraping, we are currently designing a slack app that returns messages in a dedicated channel with all the error messages that we built into the API so we can be kept abreast of any syntactical changes made to the IBM Cognos platform."
             },
             project2: {
                 title: "NLU Auto-Tagging System",
                 languages: ["fab fa-html5", "devicon-bootstrap-plain", "fab fa-js-square", "fab fa-vuejs", "devicon-ruby-plain", "devicon-rails-plain"],
                 role: "Lead Developer",
-                description: "An API that could host a headless browser in order to scrape, parse and assess IBM Cognos Analytics Reports that could then be used to drive character interactions in the Ametros Simulation Platform to assess a learner's Cognos skill level.",
-                challenges: "As the cognos reports we needed to access were being constructed in trial accounts we found we couldn't access them via the API. Further, we needed a server that could run a headless browser.",
-                solutions: "Using an EC2 server instance, a headless version of chrome and selenium we were able to create an API that took a learner's login credentials as arguments and scraped and parsed cognos reports and returned a rubric that assessed learners skill level. That data was then used to drive AI interactions in our platform.",
-                futureConsiderations: "Given the brittle nature of web scraper, we are currently designing a slack app that returns messages in a dedicated channel with all the error messages that we built into the API so we can be kept abreast of any syntactical changes made to the IBM Cognos platform."
+                description: "An automated tagging system for data saved in the interanl Ametros workshop site using Watson's NLU features that could then be used to filter objects.",
+                challenges: "Wrapping the entire Rails application in Vue inhibited other JavaScript assets from compiling. Autotagging YouTube videos as they are not text based.",
+                solutions: "I ended up replacing all the failing JS assets with a much needed Vue equivalent. I managed to get the text-based transcripts for YouTube videos using the API and passed those through Watson's NLU API.",
+                futureConsiderations: "Expanding the scope of this project to include more models."
             },
             project3: {
-                title: "Article Scraper",
-                languages: ["fab fa-html5", "devicon-bootstrap-plain", "fab fa-js-square", "fab fa-vuejs", "devicon-ruby-plain", "devicon-rails-plain"],
+                title: "Article Scraper with Slack Integration",
+                languages: ["fab fa-html5", "devicon-bootstrap-plain", "devicon-ruby-plain", "devicon-rails-plain"],
                 role: "Lead Developer",
-                description: "An API that could host a headless browser in order to scrape, parse and assess IBM Cognos Analytics Reports that could then be used to drive character interactions in the Ametros Simulation Platform to assess a learner's Cognos skill level.",
-                challenges: "As the cognos reports we needed to access were being constructed in trial accounts we found we couldn't access them via the API. Further, we needed a server that could run a headless browser.",
-                solutions: "Using an EC2 server instance, a headless version of chrome and selenium we were able to create an API that took a learner's login credentials as arguments and scraped and parsed cognos reports and returned a rubric that assessed learners skill level. That data was then used to drive AI interactions in our platform.",
-                futureConsiderations: "Given the brittle nature of web scraper, we are currently designing a slack app that returns messages in a dedicated channel with all the error messages that we built into the API so we can be kept abreast of any syntactical changes made to the IBM Cognos platform."
+                description: "A form and a slack channel wherein users could drop a URL to an article that would then be scraped, tagged and saved in the internal Ametros workshop platform",
+                challenges: "Variation from website to website in XML/HTML syntax that causes formatting errors in the process of scraping.",
+                solutions: "Extreme testing. This seems to be the only short term solution I have found, however the system I designed saves the correct formatting 90% of the time with only minor mistakes the rest of the time.",
+                futureConsiderations: "Using machine learning to streamline the process of making adjustments to account for syntax variation that causes formatting errors."
             },
             projectOne: true,
             projectTwo: false,
