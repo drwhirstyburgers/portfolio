@@ -1,70 +1,56 @@
 <template>
 <v-container bg fill-height grid-list-md tag="section" fluid>
-    <div class="full-screen" v-bind:id="index" v-if="projectOne">
-    <v-layout align-center justify-center row fill-height fluid>
-        <v-layout id="l1">
-        <v-flex id="b1" xs2>
-            <v-flex tag="h2" id="title">{{project.title}}</v-flex>
-            <v-icon  v-for="icon in project.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
-            <v-flex tag="h3">{{project.role}}</v-flex>
-        </v-flex>
-        <v-flex id="b2" xs8>
-            <v-flex tag="p"><strong><u>Description:</u></strong>  {{project.description}} </br> <strong><u>Challenge:</u></strong>  {{project.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project.futureConsiderations}} </v-flex>
-        </v-flex>
+    <div class="full-screen">
+        <transition name="fade">
+        <v-layout align-center justify-center row fill-height fluid v-if="projectOne">
+            <v-layout id="l1">
+                <v-flex id="b1" xs2>
+                    <v-flex tag="h2" id="title">{{project.title}}</v-flex>
+                    <v-icon  v-for="icon in project.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
+                    <v-flex tag="h3">{{project.role}}</v-flex>
+                </v-flex>
+                <v-flex id="b2" xs8>
+                    <v-flex tag="p"><strong><u>Description:</u></strong>  {{project.description}} </br> <strong><u>Challenge:</u></strong>  {{project.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project.futureConsiderations}} </v-flex>
+                </v-flex>
+            </v-layout>
         </v-layout>
-    </v-layout>
-    </div>
+        </transition>
+        <transition name="fade">
+        <v-layout align-center justify-center row fill-height fluid v-if="projectTwo" transition="expand">
+            <v-layout id="l1">
+                <v-flex id="b1" xs2>
+                    <v-flex tag="h2" id="title">{{project2.title}}</v-flex>
+                    <v-icon  v-for="icon in project2.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
+                    <v-flex tag="h3">{{project2.role}}</v-flex>
+                </v-flex>
+                <v-flex id="b2" xs8>
+                    <v-flex tag="p"><strong><u>Description:</u></strong>  {{project2.description}} </br> <strong><u>Challenge:</u></strong>  {{project2.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project2.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project2.futureConsiderations}} </v-flex>
+                </v-flex>
+            </v-layout>
+        </v-layout>
+        </transition>
+        <transition name="fade">
+        <v-layout align-center justify-center row fill-height fluid v-if="projectThree" transition="expand">
+            <v-layout id="l1">
+                <v-flex id="b1" xs2>
+                    <v-flex tag="h2" id="title">{{project3.title}}</v-flex>
+                    <v-icon  v-for="icon in project3.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
+                    <v-flex tag="h3">{{project3.role}}</v-flex>
+                </v-flex>
+                <v-flex id="b2" xs8>
+                    <v-flex tag="p"><strong><u>Description:</u></strong>  {{project3.description}} </br> <strong><u>Challenge:</u></strong>  {{project3.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project3.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project3.futureConsiderations}} </v-flex>
+                </v-flex>
+            </v-layout>
+        </v-layout>
+        </transition>
         <v-layout row>
-        <v-flex xs6>
-            <v-icon color="white" size="50px" id="c1">chevron_left</v-icon>
-        </v-flex>
-        <v-flex xs6 id="c2">
-            <v-spacer></v-spacer><v-icon @click="changeProject" color="white" size="50px">chevron_right</v-icon>
-        </v-flex>
-    </v-layout>
-    <div class="full-screen" v-bind:id="index" v-if="projectTwo">
-    <v-layout align-center justify-center row fill-height fluid>
-        <v-layout id="l1">
-        <v-flex id="b1" xs2>
-            <v-flex tag="h2" id="title">{{project2.title}}</v-flex>
-            <v-icon  v-for="icon in project2.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
-            <v-flex tag="h3">{{project2.role}}</v-flex>
-        </v-flex>
-        <v-flex id="b2" xs8>
-            <v-flex tag="p"><strong><u>Description:</u></strong>  {{project2.description}} </br> <strong><u>Challenge:</u></strong>  {{project2.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project2.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project2.futureConsiderations}} </v-flex>
-        </v-flex>
+            <v-flex xs6>
+                <v-icon color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
+            </v-flex>
+            <v-flex xs6 id="c2">
+                <v-spacer></v-spacer><v-icon v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
+            </v-flex>
         </v-layout>
-    </v-layout>
-    <v-layout row>
-        <v-flex xs6>
-            <v-icon color="white" size="50px" id="c1">chevron_left</v-icon>
-        </v-flex>
-        <v-flex xs6 id="c2">
-            <v-spacer></v-spacer><v-icon @click="changeProject()" color="white" size="50px">chevron_right</v-icon>
-        </v-flex>
-    </v-layout>
-    </div>
-    <div class="full-screen" v-bind:id="index" v-if="projectThree">
-    <v-layout align-center justify-center row fill-height fluid>
-        <v-layout id="l1">
-        <v-flex id="b1" xs2>
-            <v-flex tag="h2" id="title">{{project3.title}}</v-flex>
-            <v-icon  v-for="icon in project3.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
-            <v-flex tag="h3">{{project3.role}}</v-flex>
-        </v-flex>
-        <v-flex id="b2" xs8>
-            <v-flex tag="p"><strong><u>Description:</u></strong>  {{project3.description}} </br> <strong><u>Challenge:</u></strong>  {{project3.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project3.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project3.futureConsiderations}} </v-flex>
-        </v-flex>
-        </v-layout>
-    </v-layout>
-    <v-layout row>
-        <v-flex xs6>
-            <v-icon color="white" size="50px" id="c1">chevron_left</v-icon>
-        </v-flex>
-        <v-flex xs6 id="c2">
-            <v-spacer></v-spacer><v-icon @click="changeProject()" color="white" size="50px">chevron_right</v-icon>
-        </v-flex>
-    </v-layout>
     </div>
 </v-container>
 </template>
@@ -107,9 +93,24 @@ export default {
         }
     },
     methods: {
-        changeProject() {
-            if (this.count = 0){
+        nextProject() {
+            if (this.projectCount == 0){
                 this.projectOne = false
+                this.projectTwo = true
+                this.projectCount = 1
+            } else if (this.projectCount == 1) {
+                this.projectTwo = false
+                this.projectThree = true
+                this.projectCount = 2
+            }
+        },
+        previousProject() {
+            if(this.projectCount == 1) {
+                this.projectTwo = false
+                this.projectOne = true
+                this.projectCount = 0
+            }else if(this.projectCount == 2) {
+                this.projectThree = false
                 this.projectTwo = true
                 this.projectCount = 1
             }
@@ -125,9 +126,6 @@ export default {
 }
 #c2 {
     text-align: right;
-}
-section {
-    overflow-x: scroll;
 }
 #icon {
     margin-right: 5px;
@@ -150,5 +148,12 @@ h3 {
 }
 #title{
     color: white;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
