@@ -41,7 +41,7 @@
                     <v-icon  v-for="icon in project3.languages" v-bind:icon="icon" v-bind:key="icon.id" color="white" id="icon">{{ icon }}</v-icon>
                     <v-flex tag="h3">{{project3.role}}</v-flex>
                 </v-flex>
-                <v-flex class="b2" xs8>
+                <v-flex class="b2" id="2" xs8>
                     <v-flex tag="p"><strong><u>Description:</u></strong>  {{project3.description}} </br> <strong><u>Challenges:</u></strong>  {{project3.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project3.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project3.futureConsiderations}} </v-flex>
                 </v-flex>
             </v-layout>
@@ -74,7 +74,7 @@ export default {
                 futureConsiderations: "Expanding the scope of this project to include more models."
             },
             project3: {
-                title: "Article Scraper with Slack Integration",
+                title: "Slack Article Scraper",
                 languages: ["fab fa-html5", "devicon-bootstrap-plain", "devicon-ruby-plain", "devicon-rails-plain"],
                 role: "Lead Developer",
                 description: "A form and a slack channel wherein users could drop a URL to an article that would then be scraped, tagged and saved in the internal Ametros workshop platform",
