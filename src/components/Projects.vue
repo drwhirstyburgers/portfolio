@@ -13,10 +13,20 @@
                     <v-flex tag="p"><strong><u>Description:</u></strong>  {{project.description}} </br> <strong><u>Challenge:</u></strong>  {{project.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project.futureConsiderations}} </v-flex>
                 </v-flex>
             </v-layout>
+            <v-layout row>
+                <v-flex xs6 id="c2">
+                    <v-spacer></v-spacer><v-icon v-ripple v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
+                </v-flex>
+            </v-layout>
         </v-layout>
         </transition>
         <transition name="slide-fade">
         <v-layout align-center justify-center row fill-height fluid v-if="projectTwo" transition="expand">
+            <v-layout row>
+                <v-flex xs6>
+                    <v-icon v-ripple color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
+                </v-flex>
+            </v-layout>
             <v-layout id="l1">
                 <v-flex id="b1" xs2>
                     <v-flex tag="h2" id="title">{{project2.title}}</v-flex>
@@ -27,10 +37,20 @@
                     <v-flex tag="p"><strong><u>Description:</u></strong>  {{project2.description}} </br> <strong><u>Challenge:</u></strong>  {{project2.challenges}} </br> <strong><u>Solutions:</u></strong>  {{project2.solutions}} </br> <strong><u>Future Considerations:</u></strong>  {{project2.futureConsiderations}} </v-flex>
                 </v-flex>
             </v-layout>
+            <v-layout row>
+                <v-flex xs6 id="c2">
+                    <v-spacer></v-spacer><v-icon v-ripple v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
+                </v-flex>
+            </v-layout>
         </v-layout>
         </transition>
         <transition name="slide-fade">
         <v-layout align-center justify-center row fill-height fluid v-if="projectThree" transition="expand">
+                <v-layout row>
+                    <v-flex xs6>
+                        <v-icon v-ripple color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
+                    </v-flex>
+                </v-layout>
             <v-layout id="l1">
                 <v-flex id="b1" xs2>
                     <v-flex tag="h2" id="title">{{project3.title}}</v-flex>
@@ -43,14 +63,6 @@
             </v-layout>
         </v-layout>
         </transition>
-        <v-layout row>
-            <v-flex xs6>
-                <v-icon v-ripple color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
-            </v-flex>
-            <v-flex xs6 id="c2">
-                <v-spacer></v-spacer><v-icon v-ripple v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
-            </v-flex>
-        </v-layout>
     </div>
 </v-container>
 </template>
