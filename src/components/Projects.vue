@@ -1,7 +1,7 @@
 <template>
 <v-container bg fill-height grid-list-md tag="section" fluid>
     <div class="full-screen">
-        <transition name="fade">
+        <transition name="slide-fade">
         <v-layout align-center justify-center row fill-height fluid v-if="projectOne">
             <v-layout id="l1">
                 <v-flex id="b1" xs2>
@@ -15,7 +15,7 @@
             </v-layout>
         </v-layout>
         </transition>
-        <transition name="fade">
+        <transition name="slide-fade">
         <v-layout align-center justify-center row fill-height fluid v-if="projectTwo" transition="expand">
             <v-layout id="l1">
                 <v-flex id="b1" xs2>
@@ -29,7 +29,7 @@
             </v-layout>
         </v-layout>
         </transition>
-        <transition name="fade">
+        <transition name="slide-fade">
         <v-layout align-center justify-center row fill-height fluid v-if="projectThree" transition="expand">
             <v-layout id="l1">
                 <v-flex id="b1" xs2>
@@ -45,10 +45,10 @@
         </transition>
         <v-layout row>
             <v-flex xs6>
-                <v-icon color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
+                <v-icon v-ripple color="white" size="50px" id="c1" v-if="!projectOne" @click="previousProject()">chevron_left</v-icon>
             </v-flex>
             <v-flex xs6 id="c2">
-                <v-spacer></v-spacer><v-icon v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
+                <v-spacer></v-spacer><v-icon v-ripple v-if="!projectThree" @click="nextProject()" color="white" size="50px">chevron_right</v-icon>
             </v-flex>
         </v-layout>
     </div>
@@ -136,24 +136,26 @@ h3 {
 }
 #b1 {
     text-align: right;
-    margin-right: 10px;
-    margin-left: 40px;
+    margin-right: 5px;
 }
 #b2 {
-    margin-left: 15px;
-    margin-right: 30px;
+    margin-left: 10px;
 }
 #l1 {
-    min-width: 250px;
+    min-width: 270px;
 }
 #title{
     color: white;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease-out;
+.slide-fade-enter-active {
+  transition: all .3s ease;
 }
-
-.fade-enter, .fade-leave-to {
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
   opacity: 0;
 }
 </style>
