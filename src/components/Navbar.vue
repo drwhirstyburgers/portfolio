@@ -72,7 +72,7 @@
         drawer: null,
         items: [
           { title: 'HOME', icon: 'home', route: '/' },
-          { title: 'ABOUT', icon: 'question_answer', route: '/about' },
+          { title: 'AI SKILL MATCHING', icon: 'question_answer', route: '/ai_skill_match' },
           { title: 'PROJECTS', icon: 'dashboard', route: '/project' }
         ],
         right: true,
