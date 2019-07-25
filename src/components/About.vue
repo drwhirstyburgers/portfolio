@@ -33,7 +33,7 @@ export default {
             iam_apikey_name: "Auto-generated service credentials",
             iam_role_crn: "crn:v1:bluemix:public:iam::::serviceRole:Manager",
             iam_serviceid_crn: "crn:v1:bluemix:public:iam-identity::a/620d19aa4276413c92e7bf5d3fa0646a::serviceid:ServiceId-4498b04b-6032-4406-aef9-3dcf1daa844d",
-            url: "https://gateway-syd.watsonplatform.net/natural-language-understanding/api",
+            url: "https://cors-anywhere.herokuapp.com/gateway-syd.watsonplatform.net/natural-language-understanding/api",
             jobURL: '',
             skills: [],
             response: ''
@@ -49,10 +49,9 @@ export default {
             });
             const analyzeParams = {
                 'url': this.jobURL,
-                'headers': {'X-Custom-Header': 'Access-Control-Allow-Origin'},
                 'features': {
                     'categories': {
-                    'limit': 3
+                        'limit': 3
                     }
                 }
             };
