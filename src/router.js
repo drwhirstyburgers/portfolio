@@ -16,7 +16,7 @@ export default new Router({
             component: Home
         },
         {
-            path: '/about',
+            path: '/ai_skill_match',
             name: 'about',
             component: About
         },
