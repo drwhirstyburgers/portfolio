@@ -64,6 +64,7 @@ export default {
                 .catch(err => {
                     console.log('error:', err);
                 });
+            alert("This feature is still in production. Please come back soon.")
         }
     }
 }
