@@ -41,6 +41,7 @@ export default {
     },
     methods: {
         watsonCall() {
+            alert("This feature is still in production. Please come back soon.")
             const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1.js');
             const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
                 version: '2019-07-12',
@@ -64,7 +65,6 @@ export default {
                 .catch(err => {
                     console.log('error:', err);
                 });
-            alert("This feature is still in production. Please come back soon.")
         }
     }
 }
